@@ -2,6 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import "primeicons/primeicons.css";
 import { BsChevronRight } from "react-icons/bs";
+import { Sidebar } from "../Sidebar";
 
 export function CategoryMenu() {
   return (
@@ -63,7 +64,7 @@ export function CategoryMenu() {
           </div>
         </div>
       </div>
-     
+     {/* <Sidebar/> */}
     </>
   );
 }

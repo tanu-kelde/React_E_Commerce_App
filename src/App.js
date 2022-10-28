@@ -2,16 +2,14 @@ import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  Footer,
   HeaderFirst,
   HeaderSecond,
   HeaderThird,
-  CategoryMenu,
-  Sidebar,
-  Customers,
-  SectionHeadlineCard,
-  Blog,
+  CategoryList,
+  Footer
 } from "../src/Components";
+import { BrowserRouter as Router, Route,Routes } from "react-router-dom";
+import Home from './Components/Home/home'; 
 
 function App() {
   return (
@@ -20,11 +18,17 @@ function App() {
         <HeaderFirst />
         <HeaderSecond />
         <HeaderThird />
-        <CategoryMenu />
+        {/* <CategoryMenu />
         <Sidebar />
         <Customers />
         <SectionHeadlineCard />
-        <Blog />
+        <Blog /> */}
+     <Router>
+      <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/category-list" Component={<CategoryList/>} /> */}
+      </Routes>
+     </Router>
         <Footer />
       </header>
     </div>

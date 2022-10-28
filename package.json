@@ -6,9 +6,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@trendyol-js/react-carousel": "^3.0.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.2",
     "cdbreact": "^1.5.3",
+    "create-react-class": "^15.7.0",
     "primeicons": "^6.0.1",
     "primereact": "^8.7.0",
     "react": "^18.2.0",
@@ -17,6 +19,8 @@
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
+    "react-slider-swiper": "^2.0.6",
+    "swiper": "^8.4.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -42,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0"
   }
 }

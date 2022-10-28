@@ -2,11 +2,15 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import "primeicons/primeicons.css";
 import { BsChevronRight } from "react-icons/bs";
-import './Customers.css';
-
+import "./Customers.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper";
+import "swiper/css";
+import "swiper/css/free-mode";
+import { SectionHeadlineCard } from "../SectionHeadlineCard";
 
 export function Customers() {
-    return (
+  return (
     <>
       <div className="container mt-5">
         <div className="row">
@@ -19,37 +23,81 @@ export function Customers() {
             </Button>
           </div>
         </div>
-        <div className="row mt-4">
-          <div className="col-3 para">
+        <Swiper
+          autoplay={true}
+          // grabcurser={true}
+          modules={[FreeMode ]}
+          className="mySwiper"
+          slidesPerView={5}
+          spaceBetween={30}
+        >
+          <SwiperSlide>
+            <div style={{ textAlign: "center" }}>
+              <p>
+                Change this and that and try again. Duis mollis, est non commodo
+                luctus, nisi erat porttitor ligula.
+              </p>
+              <p className="name">Name and Surname</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div style={{ textAlign: "center" }}>
             <p>
               Change this and that and try again. Duis mollis, est non commodo
               luctus, nisi erat porttitor ligula.
             </p>
             <p className="name">Name and Surname</p>
-          </div>
-          <div className="col-3 para">
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div style={{ textAlign: "center" }} >
             <p>
               Change this and that and try again. Duis mollis, est non commodo
               luctus, nisi erat porttitor ligula.
             </p>
             <p className="name">Name and Surname</p>
-          </div>
-          <div className="col-3 para">
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div style={{ textAlign: "center" }} >
             <p>
               Change this and that and try again. Duis mollis, est non commodo
               luctus, nisi erat porttitor ligula.
             </p>
             <p className="name">Name and Surname</p>
-          </div>
-          <div className="col-3 para">
-            <p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+           <div style={{ textAlign: "center" }}>
+           <p>
+              Change this and that and try again. Duis mollis, est non commodo
+              luctus, nisi erat porttitor ligula.
+            </p>
+            <p className="name">Name and Surname</p>
+           </div>
+          </SwiperSlide>
+          <SwiperSlide>
+          <div style={{ textAlign: "center" }}>
+          <p>
               Change this and that and try again. Duis mollis, est non commodo
               luctus, nisi erat porttitor ligula.
             </p>
             <p className="name">Name and Surname</p>
           </div>
-        </div>
+          </SwiperSlide>
+          <SwiperSlide>
+          <div style={{ textAlign: "center" }}>
+          <p>
+              Change this and that and try again. Duis mollis, est non commodo
+              luctus, nisi erat porttitor ligula.
+            </p>
+            <p className="name">Name and Surname</p>
+          </div>
+          </SwiperSlide>
+        </Swiper>
+        
       </div>
+    {/* <SectionHeadlineCard/> */}
     </>
   );
 }

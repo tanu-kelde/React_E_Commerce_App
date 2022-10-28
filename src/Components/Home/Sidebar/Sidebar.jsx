@@ -7,6 +7,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { CDBSidebar,CDBSidebarFooter,} from "cdbreact";
 import './Sidebar.css';
+import { Customers } from "../Customers";
 
 export function Sidebar() {
     const baseURL = "https://freshness12.herokuapp.com/user/userdata";
@@ -135,7 +136,7 @@ export function Sidebar() {
         ))}
        
       </div>
-    
+    {/* <Customers /> */}
     </>
   );
 }

@@ -5,6 +5,7 @@ import "primeicons/primeicons.css";
 import { BsChevronRight } from "react-icons/bs";
 import './SectionHeadlineCard.css';
 import { logo, stock, natural } from "../../../assets/images";
+import { Blog } from "../Blog";
 
 export function SectionHeadlineCard() {
   
@@ -96,7 +97,7 @@ export function SectionHeadlineCard() {
           </div>
         </div>
       </div>
-   
+   {/* <Blog /> */}
     </>
   );
 }
