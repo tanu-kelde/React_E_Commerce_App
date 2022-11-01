@@ -5,24 +5,25 @@ import "primeicons/primeicons.css";
 import { BsChevronRight } from "react-icons/bs";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { CDBSidebar,CDBSidebarFooter,} from "cdbreact";
-import './Sidebar.css';
+import { CDBSidebar, CDBSidebarFooter } from "cdbreact";
+import "./Sidebar.css";
 import { Customers } from "../Customers";
+import { logo } from "../../../assets/images";
 
 export function Sidebar() {
-    const baseURL = "https://freshness12.herokuapp.com/user/userdata";
+  const baseURL = "https://freshness12.herokuapp.com/user/userdata";
 
-    const [post,setPost] = React.useState([]);
-  
-    useEffect(() => {
-      loadProducts();
-    }, []);
-  
-    const loadProducts = async () => {
-      const result = await axios.get(baseURL);
-      setPost(result.data);
-      console.log(result.data);
-    };
+  const [post, setPost] = React.useState([]);
+
+  useEffect(() => {
+    loadProducts();
+  }, []);
+
+  const loadProducts = async () => {
+    const result = await axios.get(baseURL);
+    setPost(result.data);
+    console.log(result.data);
+  };
   return (
     <>
       <div
@@ -119,7 +120,7 @@ export function Sidebar() {
             </Button>
           </CDBSidebarFooter>
         </CDBSidebar>
-        {post.map((m) => (
+        {/* {post.map((m) => (
           <div key={m["_id"]} className="col-3">
             <Card style={{ width: "15rem" }}>
               <Card.Img variant="top" src={m?.image} />
@@ -133,11 +134,49 @@ export function Sidebar() {
               </Card.Body>
             </Card>
           </div>
-        ))}
-       
+        ))} */}
+        <div className="row" style={{ marginLeft: "50px" }}>
+          <div className="col-4">
+            <Card style={{ width: "15rem" }}>
+              <Card.Img variant="top" src={logo} />
+              <Card.Body>
+                <Card.Title className="title">Product Title</Card.Title>
+                <Card.Text className="description">
+                  Space for a small product description
+                </Card.Text>
+                <Button variant="light">1.12 USD</Button>
+                <Button className="buyNow">Buy Now</Button>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="col-4">
+            <Card style={{ width: "15rem" }}>
+              <Card.Img variant="top" src={logo} />
+              <Card.Body>
+                <Card.Title className="title">Product Title</Card.Title>
+                <Card.Text className="description">
+                  Space for a small product description
+                </Card.Text>
+                <Button variant="light">1.12 USD</Button>
+                <Button className="buyNow">Buy Now</Button>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="col-4">
+            <Card style={{ width: "15rem" }}>
+              <Card.Img variant="top" src={logo} />
+              <Card.Body>
+                <Card.Title className="title">Product Title</Card.Title>
+                <Card.Text className="description">
+                  Space for a small product description
+                </Card.Text>
+                <Button variant="light">1.12 USD</Button>
+                <Button className="buyNow">Buy Now</Button>
+              </Card.Body>
+            </Card>
+          </div>
+        </div>
       </div>
-    {/* <Customers /> */}
     </>
   );
 }
-

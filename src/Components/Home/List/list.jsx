@@ -1,12 +1,12 @@
 import { FruitNavigation } from '../../Category-list/FruitNavigation/FruitNavigation';
 import {SideBar} from '../../Category-list/SideBar';
-import {Card} from '../../Category-list/Card';
+import { Filter } from '../../Category-list';
 function List() {
     return(
         <>
             <FruitNavigation/><br />
+            <Filter /><br />
             <SideBar/><br />
-            <Card/>
         </>
     )
 }

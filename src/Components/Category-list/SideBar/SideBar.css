@@ -1,0 +1,27 @@
+.form{
+   color: black;
+}
+.starFirst{
+    color: yellow;
+}
+.minMaxButton {
+    width: 90px;
+    border-color:#A9A9A9 ;
+}
+.price{
+        position: relative;
+        width: 35px;
+        height: 18px;
+        left: 0px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        text-decoration-line: line-through;
+        color: #a9a9a9;
+}
+.text{
+    font-size: 14px;
+    color: #A9A9A9;
+}
