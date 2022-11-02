@@ -2,7 +2,7 @@ import "./FruitNavigation.css";
 import Button from 'react-bootstrap/Button';
 import {RiLayoutGridLine} from 'react-icons/ri';
 import {BsList} from 'react-icons/bs';
-import Grid from '../../Home/Grid/grid';
+import Grid from '../../../Home/Grid/grid';
 
 export function FruitNavigation() {
   return (

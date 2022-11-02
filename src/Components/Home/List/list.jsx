@@ -1,14 +1,14 @@
-import { FruitNavigation } from '../../Category-list/FruitNavigation/FruitNavigation';
-import {SideBar} from '../../Category-list/SideBar';
-import { Filter } from '../../Category-list';
-function List() {
-    return(
-        <>
-            <FruitNavigation/><br />
-            <Filter /><br />
-            <SideBar/><br />
-        </>
-    )
-}
+// import { FruitNavigation } from '../../Inventory/ListView/FruitNavigation';
+// import {SideBar} from '../../Inventory/ListView/SideBar';
+// import { Filter } from '../../Inventory/ListView/Filter';
 
-export default List;
+// export function List() {
+//     return(
+//         <>
+//             <FruitNavigation/><br />
+//             <Filter /><br />
+//             <SideBar/><br />
+//         </>
+//     )
+// }
+

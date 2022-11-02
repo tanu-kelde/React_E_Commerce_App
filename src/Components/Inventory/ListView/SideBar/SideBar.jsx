@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { BsChevronRight } from "react-icons/bs";
 import {AiOutlineHeart} from 'react-icons/ai';
-import { stock } from "../../../assets/images";
+import { stock } from "../../../../assets/images";
 import {BsChevronDown} from 'react-icons/bs'
 export function SideBar() {
   return (

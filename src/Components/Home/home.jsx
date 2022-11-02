@@ -1,14 +1,17 @@
-import { useState } from 'react';
-import Grid from './Grid/grid';
-import List from './List/list';
-
+import { Sidebar } from "./Sidebar";
+import { CategoryMenu } from "./CategoryMenu";
+import { Customers } from "./Customers";
+import { SectionHeadlineCard } from "./SectionHeadlineCard";
+import {Blog} from './Blog';
 function Home() {
-    const [isGridView, setGridView]= useState(true);
+   
     return(
         <>
-            {
-                isGridView ? <Grid />: <List />          
-            }
+         <CategoryMenu />
+         <Sidebar />
+         <Customers />
+         <SectionHeadlineCard />
+         <Blog />
         </>
     )
 }
