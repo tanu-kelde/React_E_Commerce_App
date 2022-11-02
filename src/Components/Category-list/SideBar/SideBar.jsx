@@ -173,17 +173,18 @@ export function SideBar() {
                   />
                   <div>
                     <p style={{ color: "black" }}>Min</p>
-                    <Button variant="light" className="minMaxButton">
-                      <Button variant="light">0</Button>
-                    </Button>
+                    {/* <Button variant="light" className="minMaxButton"> */}
+                      <Button variant="light" className="minMaxButton">0</Button>
+                    {/* </Button> */}
                     {/* <p style={{color:"black"}}>Max</p> */}
-                    <Button
+                    {/* <Button
                       variant="light"
                       className="minMaxButton"
                       style={{ marginLeft: "50px" }}
-                    >
-                      <Button variant="light">000</Button>
-                    </Button>
+                    > */}
+                      <Button variant="light"  className="minMaxButton"
+                      style={{ marginLeft: "50px" }}>000</Button>
+                    {/* </Button> */}
                   </div>
                   <div className="mt-5">
                     <Button

@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
-import { SectionHeadlineCard } from "../SectionHeadlineCard";
 
 export function Customers() {
   return (
@@ -25,11 +24,11 @@ export function Customers() {
         </div>
         <Swiper
           autoplay={true}
-          // grabcurser={true}
           modules={[FreeMode ]}
           className="mySwiper"
           slidesPerView={5}
           spaceBetween={30}
+          delay={200}
         >
           <SwiperSlide>
             <div style={{ textAlign: "center" }}>
@@ -97,7 +96,6 @@ export function Customers() {
         </Swiper>
         
       </div>
-    {/* <SectionHeadlineCard/> */}
     </>
   );
 }

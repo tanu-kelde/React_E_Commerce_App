@@ -11,7 +11,7 @@ import { Customers } from "../Customers";
 import { logo } from "../../../assets/images";
 
 export function Sidebar() {
-  const baseURL = "https://freshness12.herokuapp.com/user/userdata";
+  const baseURL = "https://freshness12.herokuapp.com/product-data";
 
   const [post, setPost] = React.useState([]);
 
@@ -83,7 +83,7 @@ export function Sidebar() {
               More Products <BsChevronRight />{" "}
             </Button>
 
-            <h6 className="h6 mt-5">Bestfrom Farmers</h6>
+            <h6 className="h6 mt-5" style={{color:"black"}}>Bestfrom Farmers</h6>
             <div
               style={{
                 color: "#6A983C",

@@ -3,11 +3,11 @@ import Grid from './Grid/grid';
 import List from './List/list';
 
 function Home() {
-    const [isGridView, setGridView]= useState(false);
+    const [isGridView, setGridView]= useState(true);
     return(
         <>
             {
-                isGridView ? <Grid/> : <List/>
+                isGridView ? <Grid />: <List />          
             }
         </>
     )
