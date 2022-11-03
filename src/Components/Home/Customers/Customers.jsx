@@ -4,9 +4,11 @@ import "primeicons/primeicons.css";
 import { BsChevronRight } from "react-icons/bs";
 import "./Customers.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import swiperCore ,{Autoplay} from 'swiper'
 import { FreeMode } from "swiper";
 import "swiper/css";
-import "swiper/css/free-mode";
+import 'swiper/css/autoplay'
+// import "swiper/css/free-mode";
 
 export function Customers() {
   return (
@@ -23,12 +25,14 @@ export function Customers() {
           </div>
         </div>
         <Swiper
-          autoplay={true}
-          modules={[FreeMode ]}
-          className="mySwiper"
-          slidesPerView={5}
-          spaceBetween={30}
-          delay={200}
+       slidesPerView={4}
+       // spaceBetween={50}
+       spaceBetween={50} autoplay={{
+         "delay": 0,
+         "disableOnInteraction": false
+       }} pagination={{
+         "clickable": true
+       }} navigation={true} className="mySwiper"
         >
           <SwiperSlide>
             <div style={{ textAlign: "center" }}>
@@ -41,60 +45,59 @@ export function Customers() {
           </SwiperSlide>
           <SwiperSlide>
             <div style={{ textAlign: "center" }}>
-            <p>
-              Change this and that and try again. Duis mollis, est non commodo
-              luctus, nisi erat porttitor ligula.
-            </p>
-            <p className="name">Name and Surname</p>
+              <p>
+                Change this and that and try again. Duis mollis, est non commodo
+                luctus, nisi erat porttitor ligula.
+              </p>
+              <p className="name">Name and Surname</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div style={{ textAlign: "center" }} >
-            <p>
-              Change this and that and try again. Duis mollis, est non commodo
-              luctus, nisi erat porttitor ligula.
-            </p>
-            <p className="name">Name and Surname</p>
+            <div style={{ textAlign: "center" }}>
+              <p>
+                Change this and that and try again. Duis mollis, est non commodo
+                luctus, nisi erat porttitor ligula.
+              </p>
+              <p className="name">Name and Surname</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div style={{ textAlign: "center" }} >
-            <p>
-              Change this and that and try again. Duis mollis, est non commodo
-              luctus, nisi erat porttitor ligula.
-            </p>
-            <p className="name">Name and Surname</p>
+            <div style={{ textAlign: "center" }}>
+              <p>
+                Change this and that and try again. Duis mollis, est non commodo
+                luctus, nisi erat porttitor ligula.
+              </p>
+              <p className="name">Name and Surname</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-           <div style={{ textAlign: "center" }}>
-           <p>
-              Change this and that and try again. Duis mollis, est non commodo
-              luctus, nisi erat porttitor ligula.
-            </p>
-            <p className="name">Name and Surname</p>
-           </div>
+            <div style={{ textAlign: "center" }}>
+              <p>
+                Change this and that and try again. Duis mollis, est non commodo
+                luctus, nisi erat porttitor ligula.
+              </p>
+              <p className="name">Name and Surname</p>
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div style={{ textAlign: "center" }}>
-          <p>
-              Change this and that and try again. Duis mollis, est non commodo
-              luctus, nisi erat porttitor ligula.
-            </p>
-            <p className="name">Name and Surname</p>
-          </div>
+            <div style={{ textAlign: "center" }}>
+              <p>
+                Change this and that and try again. Duis mollis, est non commodo
+                luctus, nisi erat porttitor ligula.
+              </p>
+              <p className="name">Name and Surname</p>
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div style={{ textAlign: "center" }}>
-          <p>
-              Change this and that and try again. Duis mollis, est non commodo
-              luctus, nisi erat porttitor ligula.
-            </p>
-            <p className="name">Name and Surname</p>
-          </div>
+            <div style={{ textAlign: "center" }}>
+              <p>
+                Change this and that and try again. Duis mollis, est non commodo
+                luctus, nisi erat porttitor ligula.
+              </p>
+              <p className="name">Name and Surname</p>
+            </div>
           </SwiperSlide>
         </Swiper>
-        
       </div>
     </>
   );

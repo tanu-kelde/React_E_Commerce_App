@@ -26,12 +26,15 @@ export function Sidebar() {
   };
   return (
     <>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-3">
       <div
         style={{
           display: "flex",
           height: "90vh",
           overflow: "scroll initial",
-          marginleft: "25px",
+          // marginleft: "25px",
         }}
         className="mt-5 "
       >
@@ -45,14 +48,14 @@ export function Sidebar() {
                 textAlign: "center",
               }}
             >
-              <h6 className="h6">Best Selling Products</h6>
+              <h6 className="h6" style={{marginRight:"110px"}}>Best Selling Products</h6>
             </div>
 
             <div
               style={{
                 color: "#6A983C",
                 textAlign: "start",
-                marginLeft: "80px",
+                marginLeft:"10px"
               }}
             >
               <u>
@@ -77,18 +80,18 @@ export function Sidebar() {
             </div>
             <Button
               variant="light"
-              style={{ border: " black" }}
+              style={{ border: " black",marginRight:"110px" }}
               className="mt-5 h6"
             >
               More Products <BsChevronRight />{" "}
             </Button>
 
-            <h6 className="h6 mt-5" style={{color:"black"}}>Bestfrom Farmers</h6>
+            <h6 className="h6 mt-5" style={{color:"black",marginRight:"110px"}}>Bestfrom Farmers</h6>
             <div
               style={{
                 color: "#6A983C",
                 textAlign: "start",
-                marginLeft: "80px",
+                marginLeft:"10px"
               }}
             >
               <u>
@@ -113,13 +116,16 @@ export function Sidebar() {
             </div>
             <Button
               variant="light"
-              style={{ border: " black" }}
+              style={{ border: " black" ,marginRight:"110px"}}
               className="mt-5 h6"
             >
               More Products <BsChevronRight />{" "}
             </Button>
           </CDBSidebarFooter>
         </CDBSidebar>
+        </div>
+
+      </div>
         {/* {post.map((m) => (
           <div key={m["_id"]} className="col-3">
             <Card style={{ width: "15rem" }}>
@@ -135,7 +141,9 @@ export function Sidebar() {
             </Card>
           </div>
         ))} */}
-        <div className="row" style={{ marginLeft: "50px" }}>
+
+        <div className="col-lg-9 mt-5">
+        <div className="row" style={{ marginLeft: "20px" }}>
           <div className="col-4">
             <Card style={{ width: "15rem" }}>
               <Card.Img variant="top" src={logo} />
@@ -174,8 +182,49 @@ export function Sidebar() {
                 <Button className="buyNow">Buy Now</Button>
               </Card.Body>
             </Card>
+          </div>
+          <div className="col-4 mt-5">
+            <Card style={{ width: "15rem" }}>
+              <Card.Img variant="top" src={logo} />
+              <Card.Body>
+                <Card.Title className="title">Product Title</Card.Title>
+                <Card.Text className="description">
+                  Space for a small product description
+                </Card.Text>
+                <Button variant="light">1.12 USD</Button>
+                <Button className="buyNow">Buy Now</Button>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="col-4 mt-5">
+            <Card style={{ width: "15rem" }}>
+              <Card.Img variant="top" src={logo} />
+              <Card.Body>
+                <Card.Title className="title">Product Title</Card.Title>
+                <Card.Text className="description">
+                  Space for a small product description
+                </Card.Text>
+                <Button variant="light">1.12 USD</Button>
+                <Button className="buyNow">Buy Now</Button>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="col-4 mt-5">
+            <Card style={{ width: "15rem" }}>
+              <Card.Img variant="top" src={logo} />
+              <Card.Body>
+                <Card.Title className="title">Product Title</Card.Title>
+                <Card.Text className="description">
+                  Space for a small product description
+                </Card.Text>
+                <Button variant="light">1.12 USD</Button>
+                <Button className="buyNow">Buy Now</Button>
+              </Card.Body>
+            </Card>
+          </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

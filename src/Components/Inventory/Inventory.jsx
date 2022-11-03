@@ -1,19 +1,22 @@
 import { useState } from 'react';
-// import {GridView} from '../Inventory/GridView/GridView';
 import {ListView} from '../Inventory/ListView/Listview';
-import { BrowserRouter as Router, Route,Routes } from "react-router-dom";
+import { GridView } from '../Inventory/GridView';
+import { FruitNavigation } from './FruitNavigation';
+import { SideBar } from './SideBar';
 
 function Inventory() {
     const [isGridView, setGridView]= useState(true);
+
+    function updateGridViewState(state) {
+        setGridView(state);
+    }
+    
     return(
         <>
+        <FruitNavigation active={isGridView} changeView={updateGridViewState}/>
+        <SideBar />
             {
-                <ListView />
-                        //   <Router>
-                        //   <Routes>
-                        //       <Route path="/listview" element={<ListView/>} />
-                        //   </Routes>
-                        //  </Router>  
+                isGridView ? <GridView />: <ListView />
             }
         </>
     )
