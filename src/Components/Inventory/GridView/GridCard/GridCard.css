@@ -1,0 +1,55 @@
+.h6{
+    font-weight: bold;
+  }
+  .price {
+    position: relative;
+    width: 35px;
+    height: 18px;
+    left: 0px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration-line: line-through;
+    color: #a9a9a9;
+  
+  }
+  
+  .description1 {
+    width: 200px;
+    height: 16px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #575757;
+    text-align: start;
+
+  }
+  
+  .title1{
+    width: 150px;
+    height: 23px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #151515;
+    text-align: start;
+  }
+  .buyNow{
+    background-color: #6A983C;
+    border: 1px solid #6A983C;
+    
+
+  }
+  .buyNow:hover{
+    background-color: #6A983C;
+    border: 1px solid #6A983C;
+  }
+  .USDButton1{
+    margin-right: 23px;
+  }

@@ -10,6 +10,8 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { BsFillPersonFill } from "react-icons/bs";
 import {BsFillCartFill} from 'react-icons/bs';
 import './HeaderSecond.css';
+import { Badge } from 'primereact/badge';
+import 'primeicons/primeicons.css';
 
 export function HeaderSecond() {
   return (
@@ -52,9 +54,11 @@ export function HeaderSecond() {
               <Nav.Link href="" className="link">
               <BsFillPersonFill />
               </Nav.Link>
+             
               <Nav.Link eventKey={2} href="" className="link" >
                 <BsFillCartFill   />
               </Nav.Link>
+                {/* <span><i className="pi pi-shopping-bag ml-8 p-text-danger p-overlay-badge" style={{ fontSize: '18px' }}><Badge value="2" severity="danger"></Badge></i></span> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

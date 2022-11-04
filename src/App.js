@@ -19,11 +19,6 @@ function App() {
         <HeaderFirst />
         <HeaderSecond />
         <HeaderThird />
-        {/* <CategoryMenu />
-        <Sidebar />
-        <Customers />
-        <SectionHeadlineCard />
-        <Blog /> */}
      <Router>
       <Routes>
           <Route path="/" element={<Home />} />

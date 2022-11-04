@@ -11,7 +11,7 @@ import { Customers } from "../Customers";
 import { logo } from "../../../assets/images";
 
 export function Sidebar() {
-  const baseURL = "https://freshness12.herokuapp.com/product-data";
+  const baseURL = "https://freshness12.herokuapp.com/product-category/bakery";
 
   const [post, setPost] = React.useState([]);
 
@@ -34,7 +34,6 @@ export function Sidebar() {
           display: "flex",
           height: "90vh",
           overflow: "scroll initial",
-          // marginleft: "25px",
         }}
         className="mt-5 "
       >
@@ -126,23 +125,26 @@ export function Sidebar() {
         </div>
 
       </div>
-        {/* {post.map((m) => (
-          <div key={m["_id"]} className="col-3">
-            <Card style={{ width: "15rem" }}>
-              <Card.Img variant="top" src={m?.image} />
+      <div className="col-lg-9 mt-3">
+        <div className="row" style={{ marginLeft: "20px" }}>
+        {post.map((m) => (
+          <div key={m["_id"]} className="col-4 mt-5">
+            <Card style={{ width: "15rem" ,'height':'23rem'}}>
+              <Card.Img variant="top" src={m?.image} style={{width:"240px",height:"180px"}}/>
               <Card.Body>
-                <Card.Title className="title">{m?.title}</Card.Title>
-                <Card.Text className="description">{m?.discription}</Card.Text>
-                <Button variant="light" className="USDButton">
+                <Card.Title className="title mt-2">{m?.title}</Card.Title>
+                <Card.Text className="description mt-2">{m?.discription}</Card.Text>
+                <Button variant="light" className="USDButton mt-4">
                   {m?.price} USD
                 </Button>
-                <Button className="buyNow">Buy Now</Button>
+                <Button className="buyNow mt-4">Buy Now</Button>
               </Card.Body>
             </Card>
           </div>
-        ))} */}
-
-        <div className="col-lg-9 mt-5">
+        ))}
+</div>
+</div>
+        {/* <div className="col-lg-9 mt-5">
         <div className="row" style={{ marginLeft: "20px" }}>
           <div className="col-4">
             <Card style={{ width: "15rem" }}>
@@ -223,7 +225,7 @@ export function Sidebar() {
             </Card>
           </div>
           </div>
-        </div>
+        </div> */}
       </div>
       </div>
     </>

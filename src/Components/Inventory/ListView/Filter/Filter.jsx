@@ -9,7 +9,7 @@ export function Filter() {
   return (
     <>
       <div className="container mt-4 ">
-        <Button className="filterButton" variant="light">
+        {/* <Button className="filterButton" variant="light">
           <Button variant="light">
             <BsCircle /> Filter Text{" "}
           </Button>
@@ -22,7 +22,7 @@ export function Filter() {
             <FiSquare style={{ color: "#A9A9A9" }} /> Filtre
           </Button>
           <Button variant="light"> Nbm</Button>
-        </Button>
+        </Button> */}
         {/* <Button  className='filterButton' variant='light'><BsCircle /> Filter Text  <BsRecordCircleFill />  Filter Text</Button> */}
       </div>
     </>

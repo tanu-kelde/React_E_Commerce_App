@@ -3,6 +3,8 @@ import Container from "react-bootstrap/Container";
 import Dropdown from "react-bootstrap/Dropdown";
 import "primeicons/primeicons.css";
 import { Nav, Navbar } from "react-bootstrap";
+import Inventory from '../../Inventory/Inventory';
+import { NavLink } from "react-router-dom";
 
 export function HeaderThird() {
   return (
@@ -17,10 +19,12 @@ export function HeaderThird() {
       <Container className="mt-3">
       <Dropdown>
             <Dropdown.Toggle variant="light" id="dropdown-basic">
-              Bakery
+              Inventeroy
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href="">breads</Dropdown.Item>
+              <Dropdown.Item >
+              <Nav.Link to="/inventory">Inventory</Nav.Link>
+              </Dropdown.Item>
               <Dropdown.Item href="">cookies</Dropdown.Item>
               <Dropdown.Item href="">pizza</Dropdown.Item>
             </Dropdown.Menu>
