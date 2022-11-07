@@ -64,7 +64,6 @@ export function CategoryMenu() {
           </div>
         </div>
       </div>
-     {/* <Sidebar/> */}
     </>
   );
 }

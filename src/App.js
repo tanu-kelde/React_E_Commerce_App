@@ -22,7 +22,7 @@ function App() {
      <Router>
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/inventory" element={<Inventory/>} />
+          <Route exact path="/inventory" element={<Inventory/>} />
       </Routes>
      </Router>
         <Footer />

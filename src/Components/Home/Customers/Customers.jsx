@@ -8,7 +8,6 @@ import swiperCore ,{Autoplay} from 'swiper'
 import { FreeMode } from "swiper";
 import "swiper/css";
 import 'swiper/css/autoplay'
-// import "swiper/css/free-mode";
 
 export function Customers() {
   return (
@@ -26,7 +25,6 @@ export function Customers() {
         </div>
         <Swiper
        slidesPerView={4}
-       // spaceBetween={50}
        spaceBetween={50} autoplay={{
          "delay": 0,
          "disableOnInteraction": false

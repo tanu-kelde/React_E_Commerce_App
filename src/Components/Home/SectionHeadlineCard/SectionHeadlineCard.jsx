@@ -22,25 +22,6 @@ export function SectionHeadlineCard() {
             </Button>
           </div>
         </div>
-        <div className="row mt-5">
-          <div className="col-3">
-            {/* {
-        post.map((m)=>{
-          <Card style={{ width: "15rem" }}>
-          <Card.Img variant="top" src={m?.image} />
-          <Card.Body>
-            <Card.Title className="title">{m?.title}</Card.Title>
-            <Card.Text className="description">
-              {m?.discription}
-            </Card.Text>
-            <Button variant="light">{m?.price} USD</Button>
-            <Button className="buyNow">Buy Now</Button>
-          </Card.Body>
-        </Card>
-        })
-       } */}
-          </div>
-        </div>
         <div className="row mt-5  ">
           <div className="col-3">
             <Card style={{ width: "15rem" }}>
@@ -97,7 +78,6 @@ export function SectionHeadlineCard() {
           </div>
         </div>
       </div>
-   {/* <Blog /> */}
     </>
   );
 }

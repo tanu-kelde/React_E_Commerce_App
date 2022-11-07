@@ -7,9 +7,9 @@ import { Slider } from "@mui/material";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { BsChevronRight } from "react-icons/bs";
-import {AiOutlineHeart} from 'react-icons/ai';
+import { AiOutlineHeart } from "react-icons/ai";
 import { stock } from "../../../assets/images";
-import {BsChevronDown} from 'react-icons/bs'
+import { BsChevronDown } from "react-icons/bs";
 export function SideBar() {
   return (
     <>
@@ -172,18 +172,16 @@ export function SideBar() {
                   />
                   <div>
                     <p style={{ color: "black" }}>Min</p>
-                    {/* <Button variant="light" className="minMaxButton"> */}
-                      <Button variant="light" className="minMaxButton">0</Button>
-                    {/* </Button> */}
-                    {/* <p style={{color:"black"}}>Max</p> */}
-                    {/* <Button
+                    <Button variant="light" className="minMaxButton">
+                      0
+                    </Button>
+                    <Button
                       variant="light"
                       className="minMaxButton"
                       style={{ marginLeft: "50px" }}
-                    > */}
-                      <Button variant="light"  className="minMaxButton"
-                      style={{ marginLeft: "50px" }}>000</Button>
-                    {/* </Button> */}
+                    >
+                      000
+                    </Button>
                   </div>
                   <div className="mt-5">
                     <Button
@@ -205,19 +203,6 @@ export function SideBar() {
           </div>
         </div>
       </div>
-      {/* <div className="container">
-        <div className="row">
-         <div className="col-4">
-         <a style={{color:"#A9A9A9"}}>Page</a> : 1 2 <a style={{color:"#6A983C"}}>3</a> 4 
-         </div>
-         <div className="col-4">
-          <Button style={{ backgroundColor:"#6A983C",borderColor:"#46760A",color:"white",fontWeight:"700",marginLeft:"70px" }}>See more products <BsChevronDown/></Button>
-         </div>
-         <div className="col-4">
-         <a style={{color:"#6A983C",marginLeft:"170px"}}>360</a> Products
-         </div>
-        </div>
-      </div> */}
     </>
   );
 }
