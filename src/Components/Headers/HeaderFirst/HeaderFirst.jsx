@@ -9,7 +9,7 @@ export function HeaderFirst() {
     <div>
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Container className="mt-3">
-          <Navbar.Brand href="" style={{ color: "#6A983C" }}>
+          <Navbar.Brand href="/" style={{ color: "#6A983C" }}>
             Chat with us
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

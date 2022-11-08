@@ -3,27 +3,30 @@ import Container from "react-bootstrap/Container";
 import Dropdown from "react-bootstrap/Dropdown";
 import "primeicons/primeicons.css";
 import { Nav, Navbar } from "react-bootstrap";
-import Inventory from '../../Inventory/Inventory';
+import Inventory from "../../Inventory/Inventory";
 import { NavLink } from "react-router-dom";
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
 
 export function HeaderThird() {
+  // const location = useLocation();
+
   return (
     <div>
-     <Navbar
-      collapseOnSelect
-      expand="lg"
-      bg="light"
-      variant="light"
-      style={{ margin: "20px" }}
-    >
-      <Container className="mt-3">
-      <Dropdown>
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="light"
+        variant="light"
+        style={{ margin: "20px" }}
+      >
+        <Container className="mt-3">
+          <Dropdown>
             <Dropdown.Toggle variant="light" id="dropdown-basic">
               Inventeroy
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item >
-              <Nav.Link to="/inventory">Inventory</Nav.Link>
+              <Dropdown.Item href="/inventory">
+                inventory
               </Dropdown.Item>
               <Dropdown.Item href="">cookies</Dropdown.Item>
               <Dropdown.Item href="">pizza</Dropdown.Item>
@@ -94,16 +97,19 @@ export function HeaderThird() {
               Pharmacy
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href="">Acetone 500ml. Item No: TH-06.</Dropdown.Item>
-              <Dropdown.Item href="">ASPRO CLEAR TABLET 24'S. ...</Dropdown.Item>
-              <Dropdown.Item href="">Carbosorb X Activated Charcoal 50g. ...</Dropdown.Item>
+              <Dropdown.Item href="">
+                Acetone 500ml. Item No: TH-06.
+              </Dropdown.Item>
+              <Dropdown.Item href="">
+                ASPRO CLEAR TABLET 24'S. ...
+              </Dropdown.Item>
+              <Dropdown.Item href="">
+                Carbosorb X Activated Charcoal 50g. ...
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-       
-      </Container>
-     </Navbar>
-      </div>
-  )}
-
-
-
+        </Container>
+      </Navbar>
+    </div>
+  );
+}

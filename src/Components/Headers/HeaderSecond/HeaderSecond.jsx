@@ -10,10 +10,36 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { BsFillPersonFill } from "react-icons/bs";
 import {BsFillCartFill} from 'react-icons/bs';
 import './HeaderSecond.css';
-import { Badge } from 'primereact/badge';
 import 'primeicons/primeicons.css';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 export function HeaderSecond() {
+  const baseURL = "https://freshness12.herokuapp.com/product-data";
+  const [data,setData] =React.useState([]);
+  const [searchData, setSearchData] = React.useState([]);
+
+  useEffect(() => {
+     axios.get(baseURL).then(response=>{
+      console.log(response.data);
+      setData(response.data);
+      setSearchData(response.data);
+     }).catch(err=>{
+      console.log(err);
+     })
+  }, []);
+
+  const HandleSearch=((event)=>{
+   let value = event.target.value;
+   console.log(value);
+   let result=[];
+   result=data.filter((result=>{
+    return result.title.search(value) !== -1;
+    console.log(result);
+   }))
+   setSearchData(result);
+  })
+
   return (
     <div>
       <Navbar
@@ -29,7 +55,7 @@ export function HeaderSecond() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
-            <InputGroup className="drop" style={{color:"black"}}>
+            <InputGroup className="drop" style={{color:"black"}} onChange={(event)=>HandleSearch(event)}>
            
               <DropdownButton
                 variant="outline-secondary"
