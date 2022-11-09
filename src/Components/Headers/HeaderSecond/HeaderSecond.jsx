@@ -13,31 +13,52 @@ import './HeaderSecond.css';
 import 'primeicons/primeicons.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import { BsChevronRight } from "react-icons/bs";
+import { AiOutlineHeart } from "react-icons/ai";
+import ReactStars from "react-rating-stars-component";
 
 export function HeaderSecond() {
-  const baseURL = "https://freshness12.herokuapp.com/product-data";
+  const baseURL = "https://freshness12.herokuapp.com/product-data?search=cake";
   const [data,setData] =React.useState([]);
-  const [searchData, setSearchData] = React.useState([]);
+  const [searchData, setSearchData] = React.useState(false);
 
   useEffect(() => {
      axios.get(baseURL).then(response=>{
       console.log(response.data);
       setData(response.data);
-      setSearchData(response.data);
+      // setSearchData(response.data);
      }).catch(err=>{
       console.log(err);
      })
   }, []);
+
+  const firstExample = {
+    size: 25,
+    edit: false,
+  };
+
 
   const HandleSearch=((event)=>{
    let value = event.target.value;
    console.log(value);
    let result=[];
    result=data.filter((result=>{
+    console.log(result)
     return result.title.search(value) !== -1;
     console.log(result);
    }))
    setSearchData(result);
+  // setData(event.target.value);
+  // console.log(event.target.value);
+  // if(event.target.value===""){
+  //   setSearchData(false);
+  // }
+  // else {
+  //   setSearchData(true);
+  // }
+
   })
 
   return (
@@ -84,11 +105,117 @@ export function HeaderSecond() {
               <Nav.Link eventKey={2} href="" className="link" >
                 <BsFillCartFill   />
               </Nav.Link>
-                {/* <span><i className="pi pi-shopping-bag ml-8 p-text-danger p-overlay-badge" style={{ fontSize: '18px' }}><Badge value="2" severity="danger"></Badge></i></span> */}
             </Nav>
           </Navbar.Collapse>
         </Container>
+   
       </Navbar>
+      <div className="container mt-4">
+       <div className="row">
+     <div className="col-12">
+     {data.map((m) => (
+              <div key={m["_id"]} className="col-4 mt-5">
+                <Card style={{ width: "50rem" }} className="mt-4">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-4">
+                        <Card.Img variant="top" src={m?.image} />
+                      </div>
+                      <div className="col-4">
+                        <Card.Body>
+                          <Card.Title
+                            style={{ fontWeight: "600", textAlign: "start" }}
+                          >
+                            {m?.title}
+                          </Card.Title>
+                          <Card.Text
+                            style={{
+                              fontSize: "12px",
+                              color: "#575757",
+                              textAlign: "start",
+                            }}
+                            className="mt-3"
+                          >
+                            {m?.discription}
+                            <br />
+                            <ReactStars
+                              {...firstExample}
+                              value={m?.rating}
+                            />
+                            <br />
+                            <div
+                              className="row mt-3"
+                              style={{ color: "#A9A9A9" }}
+                            >
+                              <div className="col-5">
+                                Fresheness <br />
+                                Farm <br />
+                                Delivery <br />
+                                Stock
+                              </div>
+                              <div className="col-7">
+                                <a style={{ color: "#6A983C" }}>
+                                  {m.freshness}
+                                </a>
+                                <br />
+                                {m?.farm} <br />
+                                {m?.delivery} <br />
+                                <a style={{ color: "#6A983C" }}>{m.stock}</a>
+                              </div>
+                            </div>
+                          </Card.Text>
+                        </Card.Body>
+                      </div>
+                      <div className="col-4 mt-3">
+                        <Card.Title
+                          style={{ fontWeight: "600", textAlign: "start" }}
+                        >
+                          {m?.price} USD
+                        </Card.Title>
+                        <Card.Text
+                          className="price"
+                          style={{ textAlign: "start" }}
+                        >
+                          48.56
+                        </Card.Text>
+                        <Card.Text
+                          className="text"
+                          style={{ textAlign: "start" }}
+                        >
+                          Free Shipping <br />
+                          Delivery in 1 day
+                        </Card.Text>
+                        <Button
+                          style={{
+                            color: "white",
+                            backgroundColor: "#6A983C",
+                            borderColor: "#46760A",
+                            fontWeight: "700",
+                            marginRight: "90px",
+                          }}
+                        >
+                          Product Detail <BsChevronRight />
+                        </Button>
+                        <Button
+                          variant="light"
+                          style={{
+                            fontSize: "14px",
+                            fontWeight: "600",
+                            marginRight: "100px",
+                          }}
+                        >
+                          <AiOutlineHeart />
+                          Add to wish list
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            ))}
+     </div>
+       </div>
+        </div>
       </div>
   )}
 
